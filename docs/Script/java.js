@@ -13,40 +13,18 @@ const BonusEvent = document.getElementById("BonusEvent");
 
 const StartGame = document.getElementById("StartGame");
 
-
-  let AudioButton = document.getElementById("audioButton");
-  const AudioSource = document.getElementById("audioPlayerSource");
-  const AudioPlayer = document.getElementById("audioPlayer");
-  const MuiscButton = document.getElementById("myDropdown");
-
-  const CurrentSong = document.getElementById("CurrentSong");
-  var PixelGalaxy = document.getElementById("PixelGalaxy");
-  var FromPastToPresent = document.getElementById("FromPastToPresent");  
-  var LaNoireMenuTheme = document.getElementById("LaNoireMenuTheme");
-  var MilkoiPaperAndCats = document.getElementById("MilkoiPaperAndCats");
-  var Dovahkiin = document.getElementById("Dovahkiin");
-  var ProfessorLaytonAndLastTimeTravel = document.getElementById("ProfessorLaytonAndLastTimeTravel");
-  var YoureGoingToHaveaBadTime = document.getElementById("YoureGoingToHaveaBadTime");
-  var NeverGonnaGiveYouUp = document.getElementById("NeverGonnaGiveYouUp");
-
-  var PurchasingPixelGalaxy = document.getElementById("PurchasingPixelGalaxy");
-  var PurchasingFromPastToPresent = document.getElementById("PurchasingFromPastToPresent");  
-  var PurchasingLaNoireMenuTheme = document.getElementById("PurchasingLaNoireMenuTheme");
-  var PurchasingMilkoiPaperAndCats = document.getElementById("PurchasingMilkoiPaperAndCats");
-  var PurchasingDovahkiin = document.getElementById("PurchasingDovahkiin");
-  var PurchasingProfessorLaytonAndLastTimeTravel = document.getElementById("PurchasingProfessorLaytonAndLastTimeTravel");
-  var PurchasingYoureGoingToHaveaBadTime = document.getElementById("PurchasingYoureGoingToHaveaBadTime");
-  var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonnaGiveYouUp");
-
-
-
+let AudioButton = document.getElementById("audioButton");
+const AudioSource = document.getElementById("audioPlayerSource");
+const AudioPlayer = document.getElementById("audioPlayer");
 
 let MyDonut = new Donut();
+let MyAudio = new Audios();
+
 
 
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
-
+      
    if (AudioPlayer.classList.contains("Playing")){
       console.log("music not playing");
       AudioPlayer.pause();
@@ -62,45 +40,7 @@ AudioButton.addEventListener('click',function(){
    }
 })
 
-PixelGalaxy.onclick = function(){
-   CurrentSong.value = "Pixel Galaxy";
-   AudioSource.setAttribute('src',"/docs/Music/PixelGalaxy.mp3");
-}
 
-FromPastToPresent.onclick = function(){
-   CurrentSong.value = "From Past To Present";
-   AudioSource.setAttribute('src',"/docs/Music/FromPastToPresent.mp3");
-}
-
-LaNoireMenuTheme.onclick = function(){
-   CurrentSong.value = "LA Noire Menu Theme";
-   AudioSource.setAttribute('src',"/docs/Music/LANoireMenuTheme.mp3");
-}
-
-MilkoiPaperAndCats.onclick = function(){
-   CurrentSong.value = "Milkoi Paper And Cats";
-   AudioSource.setAttribute('src',"/docs/Music/MilkoiPaperAndCats.mp3");
-}
-
-Dovahkiin.onclick = function(){
-   CurrentSong.value = "Dovahkiin";
-   AudioSource.setAttribute('src',"/docs/Music/Dovahkiin.mp3");
-}
-
-ProfessorLaytonAndLastTimeTravel.onclick = function(){ 
-   CurrentSong.value = "Professor Layton And Last Time Travel";
-   AudioSource.setAttribute('src',"/docs/Music/ProfessorLaytonAndLastTimeTravel.mp3");
-}
-
-YoureGoingToHaveaBadTime.onclick = function(){
-   CurrentSong.value = "Youre Going To Have a Bad Time";
-   AudioSource.setAttribute('src',"/docs/Music/YoureGoingToHaveaBadTime.mp3");
-}
-
-NeverGonnaGiveYouUp.onclick = function(){
-   CurrentSong.value = "?";
-   AudioSource.setAttribute('src',"/docs/Music/NeverGonnaGiveYouUp.mp3");
-}
 
 
 function myFunction() {
@@ -136,63 +76,6 @@ if (!MyDonut.StartGame) {
 }
 
 
-    FromPastToPresent.disabled = true;
-    LaNoireMenuTheme.disabled = true;
-    MilkoiPaperAndCats.disabled = true;
-    Dovahkiin.disabled = true;
-    ProfessorLaytonAndLastTimeTravel.disabled = true;
-    YoureGoingToHaveaBadTime.disabled = true; 
-    NeverGonnaGiveYouUp.disabled = true; 
-
-    
-    
-
-
-   PurchasingFromPastToPresent.onclick = function(){
-      FromPastToPresent.disabled = false;
-      MyDonut.DonutCount -= 1000;
-      PurchasingFromPastToPresent.disabled = true;
-    }
- 
-    PurchasingLaNoireMenuTheme.onclick = function(){
-       LaNoireMenuTheme.disabled = false;
-       PurchasingLaNoireMenuTheme = true;
-     }
- 
-    PurchasingMilkoiPaperAndCats.onclick = function(){
-       MilkoiPaperAndCats.disabled = false;
-       PurchasingMilkoiPaperAndCats = true;
-     }
- 
-    PurchasingDovahkiin.onclick = function(){
-       Dovahkiin.disabled = false;
-       PurchasingDovahkiin = true;
-     }
- 
-    PurchasingProfessorLaytonAndLastTimeTravel.onclick = function(){
-       ProfessorLaytonAndLastTimeTravel.disabled = false;
-       PurchasingProfessorLaytonAndLastTimeTravel = true;
-     }
- 
-    PurchasingYoureGoingToHaveaBadTime.onclick = function(){
-       YoureGoingToHaveaBadTime.disabled = false;
-       PurchasingYoureGoingToHaveaBadTime = true;
-
-     }
- 
-    PurchasingNeverGonnaGiveYouUp.onclick = function(){
-       NeverGonnaGiveYouUp.disabled = false;
-       PurchasingNeverGonnaGiveYouUp = true;
-     }
-
-
-
-
-
-       
-
-
-
 console.log(MyDonut.StartGame); // keep track of game state
 
 StartGame.addEventListener('click', function () {
@@ -202,12 +85,15 @@ StartGame.addEventListener('click', function () {
       StartGame.innerText = "Start Game";
       clearInterval(MyDonut.AutoId);
       MyDonut.Reset();
+      MyAudio.Reset();
       console.log(MyDonut.StartGame);
    }
    else {
       MyDonut.StartGame = true;
       StartGame.innerText = "Stop game";
       UnlockDonutButtons(false);
+      MyAudio.MusicPurchasing();
+      MyAudio.MusicPlayer();
       console.log(MyDonut.StartGame);
 
    }
