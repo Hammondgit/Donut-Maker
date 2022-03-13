@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/docs/css/styles.css">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>Donut Saga<h1>
+   
+        <button id ="audioButton">Play Music</button>
+     <audio id="audioPlayer">
+        <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">
+    </audio> 
+    
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Select Music</button>
+        <div id="myDropdown" class="dropdown-content">
+
+            <button id ="PixelGalaxy">Pixel Galaxy</button>
+            <button id ="FromPastToPresent">From Past To Present</button>
+            <button id ="LaNoireMenuTheme">LA Noire Menu Theme</button>
+            <button id ="MilkoiPaperAndCats">Milkoi Paper And Cats</button>
+            <button id ="Dovahkiin">Dovahkiin</button>
+            <button id ="ProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel</button>
+            <button id ="YoureGoingToHaveaBadTime">You're Going To Have a Bad Time</button>
+            <button id ="NeverGonnaGiveYouUp">?</button>
+
+        </div>
+      </div> 
+      <label for="CurrentSong">Current Song</label>
+      <input type="string" name="CurrentSong" id="CurrentSong" value="Pixel Galaxy" readonly />
+
+
+
+    <div class="dropdownhover">
+        <button class="dropbtn">Shope</button>
+        <div class="dropdown-content-hover">
+
+            <button id ="PurchasingFromPastToPresent">From Past To Present</button>
+            <button id ="PurchasingLaNoireMenuTheme">LA Noire Menu Theme</button>
+            <button id ="PurchasingMilkoiPaperAndCats">Milkoi Paper And Cats</button>
+            <button id ="PurchasingDovahkiin">Dovahkiin</button>
+            <button id ="PurchasingProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel</button>
+            <button id ="PurchasingYoureGoingToHaveaBadTime">You're Going To Have a Bad Time</button>
+            <button id ="PurchasingNeverGonnaGiveYouUp">?</button>
+
+        </div>
+      </div>
+
+    <hr/>
+  
+    <label for="DonutCount">Donuts</label>
+    <input type="Number" name="DonutText" id="DonutText" value="0" readonly />
+
+    <label for="AutoClicks">Donut Makers</label>
+    <input type="Number" name="AutoText" id="AutoText" value="0" readonly />
+
+    <label for="MultiClicker">Click multiplier</label>
+    <input type="Number" name="MultiText" id="MultiText" value="1" readonly />
+    
+    <button id="StartGame">Start Game</button>
+    <button id="DonutClick">Click</button>
+    <button id="AutoClick">Buy Auto Click </button>
+
+<label for="AutoCosts">Auto Maker cost</label>
+<input type="Number" name="AutoCosts" id="AutoCosts" value="0" readonly />
+
+<button id="MultiClicker">Buy Multi Clicker</button>
+
+<label for="MultiCosts">Multi Cost</label>
+<input type="Number" name="MultiCosts" id="MultiCosts" value="0" readonly />
+
+<hr/>
+
+
+<div id="BonusEvent" class="Hide">
+    <p>Bonus Donuts has taken place.</p>
+</div>
+
+
+<div class = "Main Donut">
+    <canvas id="canvas" width="100" height="100"></canvas>
+</div>
+
+<script src="Script/Donut.js"></script>
+<script src="Script/Sprite.js"></script>
+<script src="Script/java.js"></script>
+</body>
+</html>
