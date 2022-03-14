@@ -94,7 +94,6 @@ class Donut {
       console.log("Donuts: " + this.DonutCount);
       switch (true) {
          case (this.DonutCount >= 0 && this.DonutCount <= 30): 
-
             if(random % 2 == 0 && this.HasRandomEvent == false){
          
                this.DonutCount += 5;

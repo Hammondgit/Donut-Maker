@@ -23,7 +23,6 @@ let MyAudio = new Audios();
 
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
-      
    if (AudioPlayer.classList.contains("Playing")){
       console.log("music not playing");
       AudioPlayer.pause();
@@ -38,9 +37,6 @@ AudioButton.addEventListener('click',function(){
       AudioButton.innerText = "Pause";
    }
 })
-
-
-
 
 function myFunction() {
    document.getElementById("myDropdown").classList.toggle("show");
@@ -71,7 +67,6 @@ function UnlockDonutButtons(state) {
 if (!MyDonut.StartGame) {
    UnlockDonutButtons(true);
 }
-
 
 console.log(MyDonut.StartGame); // keep track of game state
 
@@ -104,11 +99,10 @@ function HideBonusEvent() {
 
 function UpdateDashboard() {
    //To Never make the donut below 0 for when cost comes into play 
-
-   console.log('update dash');
    if (MyDonut.DonutCount <= 0) {
       MyDonut.DonutCount = 0;
    }
+
    DonutCount.value = Math.round(MyDonut.DonutCount); // Make a multiplayer VALUE to show up. in inxdex.
    AutoCount.value = MyDonut.AutoCount;
    MultiCount.value = Math.round(MyDonut.MultiCount);
@@ -141,7 +135,6 @@ function RunBonus(){
 }
 
 ClickButton.addEventListener('click', function () {
-   //console.log("donut was click");
    MyDonut.DonutClick();
    if (MultiCount.value > 0) {
       MyDonut.DonutCount += Math.pow(1.2, MyDonut.MultiCount);
@@ -150,8 +143,9 @@ ClickButton.addEventListener('click', function () {
 
 
 AutoButton.addEventListener('click', function () {
-   //console.log("Donut auto click");
 
+   var audio = new Audio("/docs/Sound/MouseClick.mp3");
+   audio.play();
 
    if (DonutCount.value >= MyDonut.AutoCosts) {
       MyDonut.AutoClick();
@@ -168,8 +162,7 @@ AutoButton.addEventListener('click', function () {
 })
 
 MultiButton.addEventListener('click', function () {
-   console.log("Donut multi click");
-   
+
    if (DonutCount.value >= MyDonut.MultiCosts) {
       MyDonut.MultiClick();
       MyDonut.MultiCost();
@@ -181,11 +174,10 @@ MultiButton.addEventListener('click', function () {
 
 
 /** To do List
- * sound efftcts
  * Make a mechanics or thing that gets rid of donuts
- * add more stuff to shop
- * Sytsle my website better
- * ReName var in all files
+ * add more stuff to the shop
+ * css my website better
+ * Rename my variables so thta others can understand it better 
  * polish the game
  * Balance the game
  * optimize code
