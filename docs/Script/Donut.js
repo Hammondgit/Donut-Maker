@@ -9,9 +9,9 @@ class Donut {
       this.DonutCount = 0;
       this.AutoCount = 0;
       this.MultiCount = 0;
-      this.AutoCosts = 10;
+      this.AutoCosts = 50;
       this.AutoCostsIncrease = 0;
-      this.MultiCosts = 5;
+      this.MultiCosts = 20;
       this.MultiCostsIncrease = 0;
       this.AutoId = undefined;
       this.HasRandomEvent = false;
