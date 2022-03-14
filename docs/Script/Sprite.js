@@ -4,73 +4,84 @@ const context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const MaxCapacity = 200;
-let SpriteArray = [MaxCapacity];
+let SpriteArray = [];
 
 const DountImage = new Image();
 
-
 class SnowingDonut{
     constructor(){
-    this.xDonut = 500;
-    this.yDonut = 500; //going to make this random
-     this.ySpeed = 1; // contols the speed of falling donuts
-    // this.Rotation = 0;
-   //  this.Opacity = 0.5;
+    this.xDonut = Math.random() * (canvas.width - -100 + 1) + -100;  // (Max,Min + 1) + min;
+    this.yDonut = Math.floor(Math.random() * (500 - 300 + 1)) + 300;
+    this.ySpeed = 1; // contols the speed of falling donuts
+    this.Rotation = 0;
+    this.Opacity = 0.5;
     this.size = 2;
-    this.SpriteSheet = "/docs/image/TrueDonutSprite-0003.png";
+    this.SpriteSheet = "/docs/image/OneDonut.png";
 
     }
 
     UpdateSprite(){
-        //this.Rotation += 1;
-        this.yDonut += this.ySpeed;
-         for (let i = 0; i < SpriteArray.length; i++ ){
-             SpriteArray[i] = new SpriteArray();
-         }
-    }
+       this.yDonut += this.ySpeed;
+        // this.Rotation += 0.1;
 
+        if(this.yDonut >= 1000){
+            this.yDonut = 300;
+        }
+     }
 
     draw(){
        context.save();
-      // context.globalAlpha = this.Opacity;
-       context.translate(this.xDonut,this.yDonut);
-     //  context.rotate( Math.PI / 100 * this.Rotation);
-       DountImage.src = this.SpriteSheet;
-       
-        for (let i = 0; i < 640; i += 160 ){
-            context.drawImage(DountImage, i, 0, 160, 150, i, -400, 30*this.size, 30*this.size);
-        }
+      //context.globalAlpha = this.Opacity;
+      //context.rotate( 2 / 90 * this.Rotation);
+        DountImage.src = this.SpriteSheet;
+        context.translate(this.xDonut,this.yDonut);
+        context.drawImage(DountImage, 0, 0, 160, 150, 150, -400, 30*this.size, 30*this.size);
     
-        for (let i = 0; i < 640; i += 160 ){
-            context.drawImage(DountImage, i, 150, 160, 150, i, -300, 30*this.size, 30*this.size);
-           }
 
-        for (let i = 0; i < 640; i += 160 ){
-            context.drawImage(DountImage, i, 310, 160, 150, i, -200, 30*this.size, 30*this.size);
-           }
+        // for (let i = 0; i < 640; i += 160 ){
+                
+        //     context.drawImage(DountImage, i, 0, 160, 150, i, -400, 30*this.size, 30*this.size);
+            
+        // }
+        
+        // for (let i = 0; i < 640; i += 160 ){
+        //     context.drawImage(DountImage, i, 150, 160, 150, i, -300, 30*this.size, 30*this.size);
+        //    }
+
+        // for (let i = 0; i < 640; i += 160 ){
+        //     context.drawImage(DountImage, i, 310, 160, 150, i, -200, 30*this.size, 30*this.size);
+        //    }
            
        context.restore();
     }
+    
 
 
 }
+
+
 
 
 
 function SpawnSnowingDonut(){
-    SpriteArray.push(new SnowingDonut());
-    console.log(SpriteArray);
+
+   
+    if(SpriteArray.length >= 80){
+        console.log("if");
+      
+    }
+    else{
+        console.log("else");
+      for (let i = 0; i < 20; i ++ ){
+         SpriteArray.push(new SnowingDonut(i));
+           }
+    }
+
+    console.log(SpriteArray.length);
 }
 
-function init(){
 
 
-}
-
-
-// timestamp 54:00; wcci
-// timestamp
 function animate(){
     requestAnimationFrame(animate);
     canvas.width = window.innerWidth;
@@ -79,10 +90,8 @@ function animate(){
     Sprite.UpdateSprite();
     Sprite.draw();
     }) 
+
 }
 
 
-
-
-init();
 animate();

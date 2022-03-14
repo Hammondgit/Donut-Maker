@@ -19,7 +19,7 @@ const AudioPlayer = document.getElementById("audioPlayer");
 
 let MyDonut = new Donut();
 let MyAudio = new Audios();
-SpawnSnowingDonut();
+
 
 
 AudioButton.addEventListener('click',function(){
@@ -134,6 +134,7 @@ function UpdateDashboard() {
 
 let RefreshIntervalId = setInterval(UpdateDashboard, 300);
 let BonusEventId = setInterval(RunBonus, 10000);
+let SnowingDonuts = setInterval(SpawnSnowingDonut, 5000);
 
 function RunBonus(){
    console.log('run')
@@ -145,7 +146,6 @@ function RunBonus(){
 ClickButton.addEventListener('click', function () {
    //console.log("donut was click");
    MyDonut.DonutClick();
-   SpawnSnowingDonut();
    if (MultiCount.value > 0) {
       MyDonut.DonutCount += Math.pow(1.2, MyDonut.MultiCount);
    }
