@@ -6,6 +6,7 @@ var MilkoiPaperAndCats = document.getElementById("MilkoiPaperAndCats");
 var Dovahkiin = document.getElementById("Dovahkiin");
 var ProfessorLaytonAndLastTimeTravel = document.getElementById("ProfessorLaytonAndLastTimeTravel");
 var YoureGoingToHaveaBadTime = document.getElementById("YoureGoingToHaveaBadTime");
+var WeirdMachine = document.getElementById("WeirdMachine");
 var NeverGonnaGiveYouUp = document.getElementById("NeverGonnaGiveYouUp");
 
 var PurchasingPixelGalaxy = document.getElementById("PurchasingPixelGalaxy");
@@ -16,7 +17,7 @@ var PurchasingDovahkiin = document.getElementById("PurchasingDovahkiin");
 var PurchasingProfessorLaytonAndLastTimeTravel = document.getElementById("PurchasingProfessorLaytonAndLastTimeTravel");
 var PurchasingYoureGoingToHaveaBadTime = document.getElementById("PurchasingYoureGoingToHaveaBadTime");
 var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonnaGiveYouUp");
-
+var PurchasingWeirdMachine = document.getElementById("PurchasingWeirdMachine");
 
 
 class Audios {
@@ -36,6 +37,7 @@ class Audios {
       ProfessorLaytonAndLastTimeTravel.disabled = true;
       YoureGoingToHaveaBadTime.disabled = true; 
       NeverGonnaGiveYouUp.disabled = true; 
+      WeirdMachine.disabled = true;
 
       PurchasingFromPastToPresent.disabled = true;
       PurchasingLaNoireMenuTheme.disabled = true;
@@ -44,7 +46,7 @@ class Audios {
       PurchasingProfessorLaytonAndLastTimeTravel.disabled =true;
       PurchasingYoureGoingToHaveaBadTime.disabled = true;
       PurchasingNeverGonnaGiveYouUp.disabled = true;
-
+      PurchasingWeirdMachine.disabled = true;
    }
 
       MusicPurchasing(){
@@ -56,6 +58,7 @@ class Audios {
          PurchasingProfessorLaytonAndLastTimeTravel.disabled = false;
          PurchasingYoureGoingToHaveaBadTime.disabled = false;
          PurchasingNeverGonnaGiveYouUp.disabled = false;
+         PurchasingWeirdMachine.disabled = false;
 
          PurchasingFromPastToPresent.onclick = function(){
             if(MyDonut.DonutCount >= 10){
@@ -67,8 +70,7 @@ class Audios {
                console.log("Auiod is not enough");
             }
           }
-      
-
+   
         PurchasingLaNoireMenuTheme.onclick = function(){
          if(MyDonut.DonutCount >= 10){
             MyDonut.DonutCount -= 10;
@@ -134,8 +136,19 @@ class Audios {
          else{
             console.log("Auiod is not enough");
          }
-        }
       }
+      PurchasingWeirdMachine.onclick = function(){
+         if(MyDonut.DonutCount >= 10){
+            MyDonut.DonutCount -= 10;
+            WeirdMachine.disabled = false;
+            PurchasingWeirdMachine.disabled = true;
+         }
+         else{
+            console.log("Auiod is not enough");
+         }
+      }
+
+   }
 
 
       MusicPlayer(){
@@ -177,6 +190,11 @@ class Audios {
          NeverGonnaGiveYouUp.onclick = function(){
             CurrentSong.value = "?";
             AudioSource.setAttribute('src',"/docs/Music/NeverGonnaGiveYouUp.mp3");
+         }
+
+         WeirdMachine.onclick = function(){
+            CurrentSong.value = "Weird Machine";
+            AudioSource.setAttribute('src',"/docs/Music/DROELOEWeirdMachine.mp3");
          }
     }
 

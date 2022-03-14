@@ -21,7 +21,6 @@ let MyDonut = new Donut();
 let MyAudio = new Audios();
 
 
-
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
       
@@ -66,8 +65,6 @@ function UnlockDonutButtons(state) {
    ClickButton.disabled = state;
    AutoButton.disabled = state;
    MultiButton.disabled = state;
-   
-   
 }
 
 

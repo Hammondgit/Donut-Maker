@@ -65,7 +65,7 @@ class SnowingDonut{
 function SpawnSnowingDonut(){
 
    
-    if(SpriteArray.length >= 80){
+    if(SpriteArray.length >= 120){
         console.log("if");
       
     }
