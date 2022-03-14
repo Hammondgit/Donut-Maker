@@ -10,12 +10,12 @@ const DountImage = new Image();
 
 class SnowingDonut{
     constructor(){
-    this.xDonut = Math.random() * (canvas.width - -100 + 1) + -100;  // (Max,Min + 1) + min;
+    this.xDonut = Math.random() * (canvas.width - -140 + 1) + -140;  // (Max,Min + 1) + min;
     this.yDonut = Math.floor(Math.random() * (500 - 300 + 1)) + 300;
-    this.ySpeed = 1; // contols the speed of falling donuts
+    this.ySpeed = Math.floor(Math.random() * 3) + 1; // contols the speed of falling donuts
     this.Rotation = 0;
     this.Opacity = 0.5;
-    this.size = 2;
+    this.size = Math.floor(Math.random() * 3) + 1;
     this.SpriteSheet = "/docs/image/OneDonut.png";
 
     }
@@ -23,7 +23,7 @@ class SnowingDonut{
     UpdateSprite(){
        this.yDonut += this.ySpeed;
         // this.Rotation += 0.1;
-        if(this.yDonut >= 1000){
+        if(this.yDonut >= 1300){
             this.yDonut = 300;
         }
      }

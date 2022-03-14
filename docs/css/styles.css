@@ -11,10 +11,12 @@ z-index: -1;
   
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+  background-color: #000000;
+  color: rgb(214, 126, 192);
+  padding: 10px;
+  margin: -10px;
+  opacity: 0.9;
+  
 }
 
 /* Container for flexboxes */
@@ -51,16 +53,16 @@ z-index: -1;
     display: none;
  }
   
-   /* Dropdown Button */
+  /* Dropdown Button */
 .dropbtn {
-  background-color: #3398db;
+  background-color: #db33b7;
   color: white;
-  padding: 16px;
+  padding: 7px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  
 }
+
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
@@ -130,4 +132,4 @@ z-index: -1;
 .dropdownhover:hover .dropdown-content-hover {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownhover:hover .dropbtn {background-color: #3e8e41;}
+.dropdownhover:hover .dropbtn {background-color: #225d85;}
