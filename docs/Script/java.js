@@ -186,9 +186,11 @@ MultiButton.addEventListener('click', function () {
 /** To do List
  * sound efftcts
  * Make a mechanics or thing that gets rid of donuts
- * Make a shop
+ * add more stuff to shop
  * Snowing donuts
- * Sytsle my website
+ * Sytsle my website better
  * ReName var in all files
- * Balance the game 
+ * polish the game
+ * Balance the game
+ * optimize code
  *  */ 

@@ -8,10 +8,11 @@
     <title>Document</title>
 </head>
 <body> 
-    <h1>Donut Saga<h1>
-   
+    <h1>Donut Saga<h1> 
+
+        <button id="StartGame">Start Game</button>
         <button id ="audioButton">Play Music</button>
-     <audio id="audioPlayer">
+        <audio id="audioPlayer">
         <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">
     </audio> 
     
@@ -32,53 +33,81 @@
       </div> 
       <label for="CurrentSong">Current Song</label>
       <input type="string" name="CurrentSong" id="CurrentSong" value="Pixel Galaxy" readonly />
+    <hr/>
 
+<div class="row">
+    <div class="column">
+        <div class ="button">
+            <label for="AutoCosts">Auto Maker cost</label>
+            <input type="Number" name="AutoCosts" id="AutoCosts" value="0" readonly /> 
+           <button id="AutoClick">Buy Auto Click </button>
 
-
-    <div class="dropdownhover">
-        <button class="dropbtn" id = "ShopButton" >Shope</button>
-        <div class="dropdown-content-hover">
-
-            <button id ="PurchasingFromPastToPresent">From Past To Present Cost:500</button>
-            <button id ="PurchasingLaNoireMenuTheme">LA Noire Menu Theme Cost:500</button>
-            <button id ="PurchasingMilkoiPaperAndCats">Milkoi Paper And Cats Cost:500</button>
-            <button id ="PurchasingDovahkiin">Dovahkiin Cost:500</button>
-            <button id ="PurchasingProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel Cost:500</button>
-            <button id ="PurchasingYoureGoingToHaveaBadTime">You're Going To Have a Bad Time Cost:500</button>
-            <button id ="PurchasingNeverGonnaGiveYouUp">? Cost:500</button>
+           <label for="MultiCosts">Multi Cost</label>
+           <input type="Number" name="MultiCosts" id="MultiCosts" value="0" readonly />
+           <button id="MultiClicker">Buy Multi Clicker</button>
 
         </div>
-      </div>
 
-    <hr/>
-  
-    <label for="DonutCount">Donuts</label>
-    <input type="Number" name="DonutText" id="DonutText" value="0" readonly />
+ 
 
-    <label for="AutoClicks">Donut Makers</label>
-    <input type="Number" name="AutoText" id="AutoText" value="0" readonly />
+    </div>
 
-    <label for="MultiClicker">Click multiplier</label>
-    <input type="Number" name="MultiText" id="MultiText" value="1" readonly />
+    <div class="column" >
+
+        <div class ="button">
+            <label for="DonutCount">Donuts</label>
+            <input type="Number" name="DonutText" id="DonutText" value="0" readonly />
+            <button id="DonutClick">Click</button>
+
+            <label for="AutoClicks">Donut Makers</label>
+            <input type="Number" name="AutoText" id="AutoText" value="0" readonly />
+
+            <label for="MultiClicker">Click multiplier</label>
+            <input type="Number" name="MultiText" id="MultiText" value="1" readonly />
+        </div>
+
+
+
+        <div id="BonusEvent" class="Hide">
+            <p>Bonus Donuts has taken place.</p>
+        </div>
+
+    </div>
     
-    <button id="StartGame">Start Game</button>
-    <button id="DonutClick">Click</button>
-    <button id="AutoClick">Buy Auto Click </button>
+    <div class="column" >
 
-<label for="AutoCosts">Auto Maker cost</label>
-<input type="Number" name="AutoCosts" id="AutoCosts" value="0" readonly />
+        <div class ="button">
 
-<button id="MultiClicker">Buy Multi Clicker</button>
+            <div class="dropdownhover">
+                <button class="dropbtn" id = "ShopButton" >Shope</button>
+                <div class="dropdown-content-hover">
+        
+                    <button id ="PurchasingFromPastToPresent">From Past To Present Cost:500</button>
+                    <button id ="PurchasingLaNoireMenuTheme">LA Noire Menu Theme Cost:500</button>
+                    <button id ="PurchasingMilkoiPaperAndCats">Milkoi Paper And Cats Cost:500</button>
+                    <button id ="PurchasingDovahkiin">Dovahkiin Cost:500</button>
+                    <button id ="PurchasingProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel Cost:500</button>
+                    <button id ="PurchasingYoureGoingToHaveaBadTime">You're Going To Have a Bad Time Cost:500</button>
+                    <button id ="PurchasingNeverGonnaGiveYouUp">? Cost:500</button>
+        
+                </div>
+              </div>
 
-<label for="MultiCosts">Multi Cost</label>
-<input type="Number" name="MultiCosts" id="MultiCosts" value="0" readonly />
-
-<hr/>
 
 
-<div id="BonusEvent" class="Hide">
-    <p>Bonus Donuts has taken place.</p>
-</div>
+        </div>
+
+
+    </div>
+
+  </div>
+  
+   <hr/>
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+
+
 
 
 <div class = "Main Donut">

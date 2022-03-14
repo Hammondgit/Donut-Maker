@@ -2,13 +2,54 @@ Body{
 background-color: rgb(212, 177, 203);
 }
 
-canvas {
-    border: 2px solid black;
-  }
+canvas{
+position: absolute;
+top: 50px;
+left: -25px;
+z-index: -1;
+}
   
-  .Hide {
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.button{
+  display: flex;
+  flex-direction: column;
+   margin: 10px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  display: flex;
+  justify-content: center;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 1;
+  padding: 10px;
+  
+}
+
+/* Style the footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.Hide {
     display: none;
-  }
+ }
   
    /* Dropdown Button */
 .dropbtn {
@@ -18,6 +59,7 @@ canvas {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  
 }
 
 /* Dropdown button on hover & focus */

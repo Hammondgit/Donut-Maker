@@ -23,7 +23,6 @@ class SnowingDonut{
     UpdateSprite(){
        this.yDonut += this.ySpeed;
         // this.Rotation += 0.1;
-
         if(this.yDonut >= 1000){
             this.yDonut = 300;
         }
@@ -31,7 +30,7 @@ class SnowingDonut{
 
     draw(){
        context.save();
-      //context.globalAlpha = this.Opacity;
+      context.globalAlpha = this.Opacity;
       //context.rotate( 2 / 90 * this.Rotation);
         DountImage.src = this.SpriteSheet;
         context.translate(this.xDonut,this.yDonut);
