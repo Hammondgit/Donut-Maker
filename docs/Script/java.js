@@ -19,7 +19,7 @@ const AudioPlayer = document.getElementById("audioPlayer");
 
 let MyDonut = new Donut();
 let MyAudio = new Audios();
-
+SpawnSnowingDonut();
 
 
 AudioButton.addEventListener('click',function(){
