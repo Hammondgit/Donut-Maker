@@ -10,14 +10,26 @@ const DountImage = new Image();
 
 class SnowingDonut{
     constructor(){
-    this.xDonut = Math.random() * (canvas.width - -140 + 1) + -140;  // (Max,Min + 1) + min;
-    this.yDonut = Math.floor(Math.random() * (500 - 300 + 1)) + 300;
-    this.ySpeed = Math.floor(Math.random() * 3) + 1; // contols the speed of falling donuts
+    this.xDonut = this.GenerateXRandom(140);  // (Max,Min + 1) + min;
+    this.yDonut = this.GenerateYRandom(300, 500);
+    this.ySpeed = this.GenerateySpeedRandom(1,3); // contols the speed of falling donuts
     this.Rotation = 0;
     this.Opacity = 0.5;
     this.size = Math.floor(Math.random() * 3) + 1;
-    this.SpriteSheet = "/docs/image/OneDonut.png";
+    this.SpriteSheet = "/docs/image/TrueDonutSprite-0003.png";
 
+    }
+
+    GenerateySpeedRandom(low, high){
+        return Math.floor(Math.random() * high) + low;
+    }
+
+    GenerateYRandom(low, high){
+        return Math.floor(Math.random() * (high - low + 1)) + low;
+    }
+
+    GenerateXRandom(high){
+        return Math.random() * (canvas.width - -(high) + 1) + -(high);
     }
 
     UpdateSprite(){
@@ -32,16 +44,16 @@ class SnowingDonut{
        context.save();
       context.globalAlpha = this.Opacity;
       //context.rotate( 2 / 90 * this.Rotation);
-        DountImage.src = this.SpriteSheet;
-        context.translate(this.xDonut,this.yDonut);
-        context.drawImage(DountImage, 0, 0, 160, 150, 150, -400, 30*this.size, 30*this.size);
+      context.translate(this.xDonut,this.yDonut);
+      DountImage.src = this.SpriteSheet;
+      //context.drawImage(DountImage, 0, 0, 160, 150, 250, -400, 30*this.size, 30*this.size);
     
 
-        // for (let i = 0; i < 640; i += 160 ){
+        for (let i = 0; i < 640; i += 160 ){
                 
-        //     context.drawImage(DountImage, i, 0, 160, 150, i, -400, 30*this.size, 30*this.size);
+            context.drawImage(DountImage, i, 0, 160, 150, this.GenerateXRandom(140), this.GenerateYRandom(300, 500), 30*this.size, 30*this.size);
             
-        // }
+        }
         
         // for (let i = 0; i < 640; i += 160 ){
         //     context.drawImage(DountImage, i, 150, 160, 150, i, -300, 30*this.size, 30*this.size);
@@ -63,9 +75,9 @@ class SnowingDonut{
 
 
 function SpawnSnowingDonut(){
-
-   
-    if(SpriteArray.length >= 120){
+           
+  
+    if(SpriteArray.length >= 20){
         console.log("if");
       
     }
