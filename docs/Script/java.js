@@ -16,10 +16,10 @@ const StartGame = document.getElementById("StartGame");
 let AudioButton = document.getElementById("audioButton");
 const AudioSource = document.getElementById("audioPlayerSource");
 const AudioPlayer = document.getElementById("audioPlayer");
+const AudioCLick = document.getElementById("click");
 
 let MyDonut = new Donut();
 let MyAudio = new Audios();
-
 
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
@@ -125,7 +125,7 @@ function UpdateDashboard() {
 
 let RefreshIntervalId = setInterval(UpdateDashboard, 300);
 let BonusEventId = setInterval(RunBonus, 10000);
-let SnowingDonuts = setInterval(SpawnSnowingDonut, 5000);
+let SnowingDonuts = setInterval(SpawnSnowingDonut, 2500);
 
 function RunBonus(){
    console.log('run')
@@ -135,6 +135,8 @@ function RunBonus(){
 }
 
 ClickButton.addEventListener('click', function () {
+   var sound = document.getElementById("click");
+   sound.play();
    MyDonut.DonutClick();
    if (MultiCount.value > 0) {
       MyDonut.DonutCount += Math.pow(1.2, MyDonut.MultiCount);
@@ -143,10 +145,8 @@ ClickButton.addEventListener('click', function () {
 
 
 AutoButton.addEventListener('click', function () {
-
-   var audio = new Audio("/docs/Sound/MouseClick.mp3");
-   audio.play();
-
+   var sound = document.getElementById("click");
+   sound.play();
    if (DonutCount.value >= MyDonut.AutoCosts) {
       MyDonut.AutoClick();
       MyDonut.AutoCost();
@@ -162,7 +162,8 @@ AutoButton.addEventListener('click', function () {
 })
 
 MultiButton.addEventListener('click', function () {
-
+   var sound = document.getElementById("click");
+   sound.play();
    if (DonutCount.value >= MyDonut.MultiCosts) {
       MyDonut.MultiClick();
       MyDonut.MultiCost();

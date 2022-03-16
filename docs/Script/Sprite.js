@@ -10,14 +10,14 @@ const DountImage = new Image();
 
 class SnowingDonut{
     constructor(){
-    this.xDonut = this.GenerateXRandom(140);  // (Max,Min + 1) + min;
-    this.yDonut = this.GenerateYRandom(300, 500);
+    this.xDonutImage = this.GenerateXDountRandom()  // make a random method that goes between 150-640 x of donut image
+    this.yDonutImage = this.GenerateYDountRandom()
+    this.xDountPostion = this.GenerateXRandom(140); // (Max,Min + 1) + min;
+    this.yDountPostion = this.GenerateYRandom(100, 300);
     this.ySpeed = this.GenerateySpeedRandom(1,3); // contols the speed of falling donuts
-    this.Rotation = 0;
     this.Opacity = 0.5;
     this.size = Math.floor(Math.random() * 3) + 1;
     this.SpriteSheet = "/docs/image/TrueDonutSprite-0003.png";
-
     }
 
     GenerateySpeedRandom(low, high){
@@ -32,36 +32,39 @@ class SnowingDonut{
         return Math.random() * (canvas.width - -(high) + 1) + -(high);
     }
 
+
+    GenerateXDountRandom(){
+        const xDonutArray = [0,150,300,460];
+        const random = Math.floor(Math.random() * xDonutArray.length);
+        return xDonutArray[random];
+    }
+
+    GenerateYDountRandom(){
+        const yDonutArray = [0,150,310,470];
+        const random = Math.floor(Math.random() * yDonutArray.length);
+        return yDonutArray[random];
+    }
+
+
     UpdateSprite(){
-       this.yDonut += this.ySpeed;
-        // this.Rotation += 0.1;
-        if(this.yDonut >= 1300){
-            this.yDonut = 300;
+       this.yDountPostion += this.ySpeed;
+        if(this.yDountPostion >= 1300){
+            this.yDountPostion = 300;
+            this.ySpeed = this.GenerateySpeedRandom(1,3);
+            this.xDountPostion  = this.GenerateXRandom(140); // keeps the x postion random for spawning donuts
+            this.size = Math.floor(Math.random() * 3) + 1;
         }
      }
 
     draw(){
        context.save();
-      context.globalAlpha = this.Opacity;
-      //context.rotate( 2 / 90 * this.Rotation);
-      context.translate(this.xDonut,this.yDonut);
-      DountImage.src = this.SpriteSheet;
-      //context.drawImage(DountImage, 0, 0, 160, 150, 250, -400, 30*this.size, 30*this.size);
+       context.globalAlpha = this.Opacity;
+       context.translate(this.xDountPostion ,this.yDountPostion);
+       DountImage.src = this.SpriteSheet;
+      
+        context.drawImage(DountImage,this.xDonutImage ,this.yDonutImage, 160, 150, 250, -400, 30*this.size, 30*this.size);
     
-
-        for (let i = 0; i < 640; i += 160 ){
-                
-            context.drawImage(DountImage, i, 0, 160, 150, this.GenerateXRandom(140), this.GenerateYRandom(300, 500), 30*this.size, 30*this.size);
-            
-        }
-        
-        // for (let i = 0; i < 640; i += 160 ){
-        //     context.drawImage(DountImage, i, 150, 160, 150, i, -300, 30*this.size, 30*this.size);
-        //    }
-
-        // for (let i = 0; i < 640; i += 160 ){
-        //     context.drawImage(DountImage, i, 310, 160, 150, i, -200, 30*this.size, 30*this.size);
-        //    }
+      
            
        context.restore();
     }
@@ -70,16 +73,11 @@ class SnowingDonut{
 
 }
 
-
-
-
-
 function SpawnSnowingDonut(){
            
   
-    if(SpriteArray.length >= 20){
-        console.log("if");
-      
+    if(SpriteArray.length >= 50){
+        console.log("Donut obj is 40 or above");
     }
     else{
         console.log("else");

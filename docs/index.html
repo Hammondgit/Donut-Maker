@@ -10,12 +10,16 @@
 <body> 
   
         <h1 class="header">Donut Saga<h1> 
+
+
             
         <button id="StartGame">Start Game</button>
         <button id ="audioButton">Play Music</button>
         <audio id="audioPlayer">
         <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">
+        
     </audio>
+    
     <source id="Click" src="/docs/Sound/MouseClick.mp3" type="audio/mpeg">
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Select Music</button>
@@ -36,8 +40,9 @@
       <label for="CurrentSong">Current Song</label>
       <input type="string" name="CurrentSong" id="CurrentSong" value="Pixel Galaxy" readonly />
 
-      <a href="https://www.linkedin.com/in/darius-hmmond/">Linkedin</a> 
-      <a href="https://github.com/Hammondgit">Github</a> 
+      <a class="link" href="https://www.linkedin.com/in/darius-hmmond/">Linkedin</a> 
+      <a class ="git" href="https://github.com/Hammondgit">Github</a> 
+
     <hr/>
 
 <div class="row">
@@ -53,7 +58,8 @@
 
         </div>
 
- 
+        <audio id="click"  src="/docs/Sound/MouseClick.mp3"></audio>
+        <a onclick="playSound();"> </a>
 
     </div>
 
