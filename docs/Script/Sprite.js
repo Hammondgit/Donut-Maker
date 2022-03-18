@@ -13,10 +13,11 @@ class SnowingDonut{
     this.xDonutImage = this.GenerateXDountRandom()  // make a random method that goes between 150-640 x of donut image
     this.yDonutImage = this.GenerateYDountRandom()
     this.xDountPostion = this.GenerateXRandom(220); // (Max,Min + 1) + min;
-    this.yDountPostion = this.GenerateYRandom(100, 300);
+    this.yDountPostion = this.GenerateYRandom(-400, 100);
     this.ySpeed = this.GenerateySpeedRandom(1,3); // contols the speed of falling donuts
     this.Opacity = 0.5;
-    this.size = Math.floor(Math.random() * 3) + 1;
+    this.roartation = 0;
+    this.size = 1;
     this.SpriteSheet = "/docs/image/TrueDonutSprite-0003.png";
     }
 
@@ -47,39 +48,38 @@ class SnowingDonut{
 
 
     UpdateSprite(){
+
        this.yDountPostion += this.ySpeed;
-        if(this.yDountPostion >= 1300){
-            this.yDountPostion = 300;
+
+        if(this.yDountPostion >= 1300){ // change 1300 to be dependedant on canvas height
+            this.yDountPostion = -400;
             this.ySpeed = this.GenerateySpeedRandom(1,3);
             this.xDountPostion  = this.GenerateXRandom(220); // keeps the x postion random for spawning donuts
             this.size = Math.floor(Math.random() * 3) + 1;
             this.xDonutImage = this.GenerateXDountRandom();
             this.yDonutImage = this.GenerateYDountRandom();
         }
+        this.roartation += 1;
+        
      }
 
     draw(){
        context.save();
        context.globalAlpha = this.Opacity;
-       context.translate(this.xDountPostion ,this.yDountPostion);
+       context.translate(this.xDountPostion + this.xDonutImage ,this.yDountPostion + this.yDonutImage);
+       context.rotate(Math.PI / 180 * this.roartation);
        DountImage.src = this.SpriteSheet;
+       // img sx sy swidth sheight dx dy dwidth dheight
+       context.drawImage(DountImage,this.xDonutImage ,this.yDonutImage, 160, 160, -40 * this.size, -40 * this.size, 80 * this.size, 80 * this.size);
       
-        context.drawImage(DountImage,this.xDonutImage ,this.yDonutImage, 160, 150, 250, -400, 30*this.size, 30*this.size);
-    
-      
-           
        context.restore();
     }
-    
-
-
 }
 
 function SpawnSnowingDonut(){
            
-  
     if(SpriteArray.length >= 50){
-        console.log("Donut obj is 40 or above");
+        console.log("Donut obj is 50 or above");
     }
     else{
         console.log("else");
