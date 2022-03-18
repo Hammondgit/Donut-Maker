@@ -12,7 +12,7 @@ class SnowingDonut{
     constructor(){
     this.xDonutImage = this.GenerateXDountRandom()  // make a random method that goes between 150-640 x of donut image
     this.yDonutImage = this.GenerateYDountRandom()
-    this.xDountPostion = this.GenerateXRandom(140); // (Max,Min + 1) + min;
+    this.xDountPostion = this.GenerateXRandom(220); // (Max,Min + 1) + min;
     this.yDountPostion = this.GenerateYRandom(100, 300);
     this.ySpeed = this.GenerateySpeedRandom(1,3); // contols the speed of falling donuts
     this.Opacity = 0.5;
@@ -51,8 +51,10 @@ class SnowingDonut{
         if(this.yDountPostion >= 1300){
             this.yDountPostion = 300;
             this.ySpeed = this.GenerateySpeedRandom(1,3);
-            this.xDountPostion  = this.GenerateXRandom(140); // keeps the x postion random for spawning donuts
+            this.xDountPostion  = this.GenerateXRandom(220); // keeps the x postion random for spawning donuts
             this.size = Math.floor(Math.random() * 3) + 1;
+            this.xDonutImage = this.GenerateXDountRandom();
+            this.yDonutImage = this.GenerateYDountRandom();
         }
      }
 
