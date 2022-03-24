@@ -55,7 +55,7 @@ class SnowingDonut{
             this.yDountPostion = -400;
             this.ySpeed = this.GenerateySpeedRandom(1,3);
             this.xDountPostion  = this.GenerateXRandom(220); // keeps the x postion random for spawning donuts
-            this.size = Math.floor(Math.random() * 3) + 1;
+            this.size = Math.floor(Math.random() * 2) + 1;
             this.xDonutImage = this.GenerateXDountRandom();
             this.yDonutImage = this.GenerateYDountRandom();
         }
