@@ -1,7 +1,7 @@
 const ClickButton = document.getElementById("DonutClick");
 const AutoButton = document.getElementById("AutoClick");
 const MultiButton = document.getElementById("MultiClicker");
-
+//temp
 const DonutCount = document.getElementById("DonutText");
 const AutoCount = document.getElementById("AutoText");
 const MultiCount = document.getElementById("MultiText");
