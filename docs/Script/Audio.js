@@ -20,7 +20,7 @@ var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonn
 var PurchasingWeirdMachine = document.getElementById("PurchasingWeirdMachine");
 
 
-class Audios {
+class Audio {
 
    constructor(){
       this.Reset();
@@ -67,7 +67,7 @@ class Audios {
             PurchasingFromPastToPresent.disabled = true;
             }
             else{
-               console.log("Auiod is not enough");
+               console.log("Audio is not enough");
             }
           }
    
@@ -78,7 +78,7 @@ class Audios {
             PurchasingLaNoireMenuTheme.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
          }
 
@@ -90,7 +90,7 @@ class Audios {
            PurchasingMilkoiPaperAndCats.disabled = true;
         }
        else{
-         console.log("Auiod is not enough");
+         console.log("Audio is not enough");
        }       
        }
      
@@ -101,7 +101,7 @@ class Audios {
            PurchasingDovahkiin.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
          }
      
@@ -112,7 +112,7 @@ class Audios {
            PurchasingProfessorLaytonAndLastTimeTravel.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
          }
      
@@ -123,7 +123,7 @@ class Audios {
            PurchasingYoureGoingToHaveaBadTime.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
          }
      
@@ -134,7 +134,7 @@ class Audios {
            PurchasingNeverGonnaGiveYouUp.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
       }
       PurchasingWeirdMachine.onclick = function(){
@@ -144,7 +144,7 @@ class Audios {
             PurchasingWeirdMachine.disabled = true;
          }
          else{
-            console.log("Auiod is not enough");
+            console.log("Audio is not enough");
          }
       }
 

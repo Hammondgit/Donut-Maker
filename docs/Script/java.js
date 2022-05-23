@@ -19,7 +19,7 @@ const AudioPlayer = document.getElementById("audioPlayer");
 const AudioCLick = document.getElementById("click");
 
 let MyDonut = new Donut();
-let MyAudio = new Audios();
+let MyAudio = new Audio();
 
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
