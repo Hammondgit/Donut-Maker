@@ -19,7 +19,7 @@ const AudioPlayer = document.getElementById("audioPlayer");
 const AudioCLick = document.getElementById("click");
 
 let MyDonut = new Donut();
-let MyAudio = new Audio();
+let MyAudio = new Music();
 
 AudioButton.addEventListener('click',function(){
    // siwtch case for buying values? and a pause button
@@ -55,13 +55,14 @@ function myFunction() {
      }
    }
  } 
-
+ 
 
 function UnlockDonutButtons(state) {
-   ClickButton.disabled = state;
+   ClickButton.disabled = state; 
    AutoButton.disabled = state;
    MultiButton.disabled = state;
 }
+
 
 
 if (!MyDonut.StartGame) {
@@ -78,9 +79,13 @@ StartGame.addEventListener('click', function () {
       clearInterval(MyDonut.AutoId);
       MyDonut.Reset();
       MyAudio.Reset();
+      console.log("stop");
+      ClickButton.src = "/docs/image/BigDonutShadeSprite-03.png";
       console.log(MyDonut.StartGame);
    }
    else {
+      console.log("start");
+      ClickButton.src = "/docs/image/BigDonutSprite-03.png";
       MyDonut.StartGame = true;
       StartGame.innerText = "Stop game";
       UnlockDonutButtons(false);
@@ -134,19 +139,28 @@ function RunBonus(){
    }
 }
 
+let ClickSound = new Audio("/docs/Sound/Click.wav");
+ClickSound.volume = 0.2;
+
+
 ClickButton.addEventListener('click', function () {
-   var sound = document.getElementById("click");
-   sound.play();
+   ClickSound.play();
+   console.log(ClickButton.disabled);
    MyDonut.DonutClick();
    if (MultiCount.value > 0) {
       MyDonut.DonutCount += Math.pow(1.2, MyDonut.MultiCount);
    }
 })
 
+ClickButton.addEventListener('mouseleave',function () {
+console.log("out");
+
+
+})
+
 
 AutoButton.addEventListener('click', function () {
-   var sound = document.getElementById("click");
-   sound.play();
+   ClickSound.play();
    if (DonutCount.value >= MyDonut.AutoCosts) {
       MyDonut.AutoClick();
       MyDonut.AutoCost();
@@ -162,8 +176,7 @@ AutoButton.addEventListener('click', function () {
 })
 
 MultiButton.addEventListener('click', function () {
-   var sound = document.getElementById("click");
-   sound.play();
+   ClickSound.play();
    if (DonutCount.value >= MyDonut.MultiCosts) {
       MyDonut.MultiClick();
       MyDonut.MultiCost();

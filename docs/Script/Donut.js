@@ -1,5 +1,7 @@
-class Donut {
 
+ 
+
+class Donut {
 
    constructor() {
      this.Reset();
@@ -21,7 +23,9 @@ class Donut {
  //making a if statment to allow the autoclick be modified by MultiClick
      
    DonutClick() {
-      
+
+
+
       if(this.MultiCount > 0){
          this.DonutCount += Math.pow(1.2, this.MultiCount);
       }

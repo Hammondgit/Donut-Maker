@@ -20,7 +20,7 @@ var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonn
 var PurchasingWeirdMachine = document.getElementById("PurchasingWeirdMachine");
 
 
-class Audio {
+class Music {
 
    constructor(){
       this.Reset();

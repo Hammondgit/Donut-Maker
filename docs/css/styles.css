@@ -157,6 +157,21 @@ z-index: -1;
   font-size: 26px;
   text-align: center;
   text-decoration: none;
-  
 }
 
+
+.BigDonut{
+  scale:0.7;
+
+  /* hover exit */
+  transition-duration:0.5s;
+   transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
+   
+}
+
+.BigDonut:hover{
+  
+ /* hover over  */
+transition-duration:0.4s;
+ scale: 0.9;
+}

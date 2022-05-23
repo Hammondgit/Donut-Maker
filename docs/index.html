@@ -15,6 +15,7 @@
             
         <button id="StartGame">Start Game</button>
         <button id ="audioButton">Play Music</button>
+
         <audio id="audioPlayer">
         <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">
         
@@ -58,9 +59,6 @@
 
         </div>
 
-        <audio id="click"  src="/docs/Sound/Click.wav"></audio>
-        <a onclick="playSound();"> </a>
-
     </div>
 
     <div class="column" >
@@ -68,8 +66,8 @@
         <div class ="buttonContainer">
             <label for="DonutCount">Donuts</label>
             <input type="Number" name="DonutText" id="DonutText" value="0" readonly />
-            <button id="DonutClick">Click</button>
-
+            <input type="image" src="/docs/image/BigDonutShadeSprite-03.png" class="BigDonut" id="DonutClick" />
+        
             <label for="AutoClicks">Donut Makers</label>
             <input type="Number" name="AutoText" id="AutoText" value="0" readonly />
 
@@ -121,7 +119,7 @@
     <canvas id="canvas" width="100" height="100"></canvas>
 </div>
 
-<script src="Script/Audio.js"></script>
+<script src="Script/Music.js"></script>
 <script src="Script/Donut.js"></script>
 <script src="Script/Sprite.js"></script>
 <script src="Script/java.js"></script>
