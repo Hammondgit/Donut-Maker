@@ -81,11 +81,15 @@ StartGame.addEventListener('click', function () {
       MyAudio.Reset();
       console.log("stop");
       ClickButton.src = "/docs/image/BigDonutShadeSprite-03.png";
+      AutoButton.src = "/docs/image/Button-off-Sprite-001.png";
+      MultiButton.src = "/docs/image/Button-Multi-off-Sprite-001.png";
       console.log(MyDonut.StartGame);
    }
    else {
       console.log("start");
       ClickButton.src = "/docs/image/BigDonutSprite-03.png";
+      AutoButton.src = "/docs/image/Button-on-Sprite-001.png";
+      MultiButton.src = "/docs/image/Button-Multi-on-Sprite-001.png";
       MyDonut.StartGame = true;
       StartGame.innerText = "Stop game";
       UnlockDonutButtons(false);

@@ -19,9 +19,31 @@ z-index: -1;
   
 }
 
+.link {
+  position: absolute;
+  right: 150px;
+  bottom:860px;
+  color: rgb(214, 126, 192);
+  padding: 1px 25px;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.git {
+  position: absolute;
+  right: 290px;
+  bottom:860px;
+  color: rgb(214, 126, 192);
+  padding: 1px 25px;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* Container for flexboxes */
 .row {
-  display: -webkit-flex;
   display: flex;
 }
 
@@ -136,42 +158,49 @@ z-index: -1;
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdownhover:hover .dropbtn {background-color: #225d85;}
 
-.link {
-  position: absolute;
-  right: 150px;
-  bottom:860px;
-  color: rgb(214, 126, 192);
-  padding: 1px 25px;
-  font-size: 26px;
-  text-align: center;
-  text-decoration: none;
-  
-}
-
-.git {
-  position: absolute;
-  right: 290px;
-  bottom:860px;
-  color: rgb(214, 126, 192);
-  padding: 1px 25px;
-  font-size: 26px;
-  text-align: center;
-  text-decoration: none;
-}
 
 
+ /* hover exit */
 .BigDonut{
   scale:0.7;
 
-  /* hover exit */
+ 
   transition-duration:0.5s;
-   transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
+  transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
    
 }
-
-.BigDonut:hover{
   
  /* hover over  */
+.BigDonut:hover{
+
 transition-duration:0.4s;
  scale: 0.9;
+}
+
+.AutoButton{
+margin: 10px;
+height:18%;
+scale:0.7;
+transition-duration:0.5s;
+transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
+
+}
+
+
+.AutoButton:hover{
+  transition-duration:0.4s;
+  scale: 0.9;
+}
+
+.MultiButton{
+margin: 10px;
+height:18%;
+scale:0.7;
+transition-duration:0.5s;
+transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
+}
+
+.MultiButton:hover{
+  transition-duration:0.4s;
+  scale: 0.9;
 }
