@@ -2,6 +2,8 @@
 
 Changelogs
 
+version 1.2
+Change the buy buttons to iamges 
 
 Version 1.1
 Switch click button to a image
