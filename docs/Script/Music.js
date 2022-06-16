@@ -8,6 +8,7 @@ var ProfessorLaytonAndLastTimeTravel = document.getElementById("ProfessorLaytonA
 var YoureGoingToHaveaBadTime = document.getElementById("YoureGoingToHaveaBadTime");
 var WeirdMachine = document.getElementById("WeirdMachine");
 var NeverGonnaGiveYouUp = document.getElementById("NeverGonnaGiveYouUp");
+var CoconutMall = document.getElementById("CoconutMall-MarioKart");
 
 var PurchasingPixelGalaxy = document.getElementById("PurchasingPixelGalaxy");
 var PurchasingFromPastToPresent = document.getElementById("PurchasingFromPastToPresent");  
@@ -18,7 +19,7 @@ var PurchasingProfessorLaytonAndLastTimeTravel = document.getElementById("Purcha
 var PurchasingYoureGoingToHaveaBadTime = document.getElementById("PurchasingYoureGoingToHaveaBadTime");
 var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonnaGiveYouUp");
 var PurchasingWeirdMachine = document.getElementById("PurchasingWeirdMachine");
-
+var PurchasingCoconutMall = document.getElementById("PurchasingCoconutMall-MarioKart");
 
 class Music {
 
@@ -38,6 +39,8 @@ class Music {
       YoureGoingToHaveaBadTime.disabled = true; 
       NeverGonnaGiveYouUp.disabled = true; 
       WeirdMachine.disabled = true;
+      CoconutMall.disabled = true;
+      
 
       PurchasingFromPastToPresent.disabled = true;
       PurchasingLaNoireMenuTheme.disabled = true;
@@ -47,6 +50,7 @@ class Music {
       PurchasingYoureGoingToHaveaBadTime.disabled = true;
       PurchasingNeverGonnaGiveYouUp.disabled = true;
       PurchasingWeirdMachine.disabled = true;
+      PurchasingCoconutMall.disabled = true;
    }
 
       MusicPurchasing(){
@@ -59,6 +63,7 @@ class Music {
          PurchasingYoureGoingToHaveaBadTime.disabled = false;
          PurchasingNeverGonnaGiveYouUp.disabled = false;
          PurchasingWeirdMachine.disabled = false;
+         PurchasingCoconutMall.disabled = false;
 
          PurchasingFromPastToPresent.onclick = function(){
             if(MyDonut.DonutCount >= 10){
@@ -147,6 +152,17 @@ class Music {
             console.log("Audio is not enough");
          }
       }
+      PurchasingCoconutMall.onclick = function(){
+         if(MyDonut.DonutCount >= 10){
+            MyDonut.DonutCount -= 10;
+            CoconutMall.disabled = false;
+            PurchasingCoconutMall.disabled = true;
+         }
+         else{
+            console.log("Audio is not enough");
+         }
+      }
+      
 
    }
 
@@ -196,6 +212,11 @@ class Music {
             CurrentSong.value = "Weird Machine";
             AudioSource.setAttribute('src',"/docs/Music/DROELOEWeirdMachine.mp3");
          }
+        CoconutMall.onclick = function(){
+         CurrentSong.value = "Coconut Mall";
+         AudioSource.setAttribute('src',"/docs/Music/CoconutMall-Mario Kart.mp3");
+      }
+
     }
 
 

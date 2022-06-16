@@ -7,42 +7,53 @@
     <link rel="stylesheet" href="/docs/css/styles.css">
     <title>Document</title>
 </head>
+
 <body> 
   
-        <h1 class="header">Donut Saga Beta<h1> 
+    <header>
 
-
-            
-        <button id="StartGame">Start Game</button>
-        <button id ="audioButton">Play Music</button>
-
-        <audio id="audioPlayer">
-        <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">
-        
-    </audio>
+        <h1 class="logo">Donut Saga Beta<h1> 
     
-    <source id="Click" src="/docs/Sound/MouseClick.mp3" type="audio/mpeg">
+       <slecet class="nav">
+           <a class="link" href="https://www.linkedin.com/in/darius-hmmond/">Linkedin</a> 
+           <a class="git" href="https://github.com/Hammondgit">Github</a> 
+          
+        </slecet>
+    </header>
+
+        <div class="menu">
+        <button id="StartGame" class="dropbtn" >Start Game</button>
+        <button id ="audioButton" class="dropbtn" >Play Music</button>
+
+
+        
+
+
+        
+        <audio id="audioPlayer">
+        <source id="audioPlayerSource" src="/docs/Music/PixelGalaxy.mp3" type="audio/mpeg">  
+        </audio>
+    
+
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Select Music</button>
-        <div id="myDropdown" class="dropdown-content">
-
-            <button id ="PixelGalaxy">Pixel Galaxy</button>
-            <button id ="FromPastToPresent">From Past To Present</button>
-            <button id ="LaNoireMenuTheme">LA Noire Menu Theme</button>
-            <button id ="MilkoiPaperAndCats">Milkoi Paper And Cats</button>
-            <button id ="Dovahkiin">Dovahkiin</button>
-            <button id ="WeirdMachine">Weird Machine</button>
-            <button id ="ProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel</button>
-            <button id ="YoureGoingToHaveaBadTime">You're Going To Have a Bad Time</button>
-            <button id ="NeverGonnaGiveYouUp">?</button>
-
-        </div>
-      </div> 
+        <select class="dropbtn">
+        <option id ="PixelGalaxy">Pixel Galaxy</option>
+        <option id ="FromPastToPresent">From Past To Present</option>
+        <option id ="LaNoireMenuTheme">LA Noire Menu Theme</option>
+        <option id ="MilkoiPaperAndCats">Milkoi Paper And Cats</option>
+        <option id ="Dovahkiin">Dovahkiin</option>
+        <option id ="WeirdMachine">Weird Machine</option>
+        <option id ="ProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel</option>
+        <option id ="YoureGoingToHaveaBadTime">You're Going To Have a Bad Time</option>
+        <option id ="NeverGonnaGiveYouUp">?</option>
+        <option id ="CoconutMall-MarioKart">Coconut Mall</option>
+        
+        </select>
+        
       <label for="CurrentSong">Current Song</label>
       <input type="string" name="CurrentSong" id="CurrentSong" value="Pixel Galaxy" readonly />
-
-      <a class="link" href="https://www.linkedin.com/in/darius-hmmond/">Linkedin</a> 
-      <a class ="git" href="https://github.com/Hammondgit">Github</a> 
+    
+</div>
 
     <hr/>
 
@@ -50,11 +61,11 @@
     <div class="column">
         <div class ="buttonContainer">
            <label for="AutoCosts">Auto Maker cost</label>
-           <input type="Number" name="AutoCosts" id="AutoCosts" value="0" readonly /> 
+           <input type="text" name="AutoCosts" id="AutoCosts" value="0" class="cost" readonly /> 
            <input type="image" src="/docs/image/Button-off-Sprite-001.png" class="AutoButton" id="AutoClick" />
 
            <label for="MultiCosts">Multi Cost</label>
-           <input type="Number" name="MultiCosts" id="MultiCosts" value="0" readonly />
+           <input type="text" name="MultiCosts" id="MultiCosts" value="0" readonly />
            <input type="image" src="/docs/image/Button-Multi-off-Sprite-001.png" class="MultiButton" id="MultiClicker" />
 
         </div>
@@ -65,15 +76,15 @@
                
         <div class ="buttonContainer">
             <label for="DonutCount">Donuts</label>
-            <input type="Number" name="DonutText" id="DonutText" value="0" readonly />
+            <input type="text" name="DonutText" id="DonutText" value="0" readonly />
             <input type="image" src="/docs/image/BigDonutShadeSprite-03.png" class="BigDonut" id="DonutClick" />
         
             <label for="AutoClicks">Donut Makers</label>
-            <input type="Number" name="AutoText" id="AutoText" value="0" readonly />
+            <input type="text" name="AutoText" id="AutoText" value="0" readonly />
             
 
             <label for="MultiClicker">Click multiplier</label>
-            <input type="Number" name="MultiText" id="MultiText" value="1" readonly />
+            <input type="text" name="MultiText" id="MultiText" value="1" readonly />
         </div>
 
     </div>
@@ -94,6 +105,7 @@
                     <button id ="PurchasingDovahkiin">Dovahkiin Cost:10</button>
                     <button id ="PurchasingWeirdMachine">Weird Machine:10</button>
                     <button id ="PurchasingNeverGonnaGiveYouUp">? Cost:10</button>
+                    <button id ="PurchasingCoconutMall-MarioKart">CoconutMall Cost:10</button>
                     
         
                 </div>

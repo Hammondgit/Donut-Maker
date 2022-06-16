@@ -1,5 +1,7 @@
 Body{
 background-color: rgb(212, 177, 203);
+margin:0;
+padding: 0;
 }
 
 canvas{
@@ -8,39 +10,68 @@ top: 50px;
 left: -25px;
 z-index: -1;
 }
-  
-/* Style the header */
-.header {
-  background-color: #000000;
-  color: rgb(214, 126, 192);
+
+header{
+height: 64px;
+min-height: 64px;
+background-color: #000000;
+padding: 0;
+margin: 0;
+color: rgb(214, 126, 192);
+display:flex;
+align-items: baseline;
+justify-content: space-between;
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.nav{
+  display:flex;
+  gap: 1rem;
+ align-self: center;
+ cursor: default;
+}
+
+.nav a{
+  border-bottom: 2px solid rgba(255, 0, 0, 0);
+}
+
+.nav a:hover{
+  align-self:center;
+  border-bottom: 2px solid rgb(214, 126, 192)
+}
+
+/* Style the logo */
+.logo {
   padding: 10px;
   margin: -10px;
   opacity: 0.9;
-  
 }
 
+/* Link to linkind */
 .link {
-  position: absolute;
-  right: 150px;
-  bottom:860px;
+
   color: rgb(214, 126, 192);
-  padding: 1px 25px;
   font-size: 26px;
   text-align: center;
   text-decoration: none;
   
 }
-
+/* link to github */
 .git {
-  position: absolute;
-  right: 290px;
-  bottom:860px;
+  
   color: rgb(214, 126, 192);
-  padding: 1px 25px;
   font-size: 26px;
   text-align: center;
   text-decoration: none;
 }
+
+/* cost number */
+.cost{
+ 
+
+}
+
 
 /* Container for flexboxes */
 .row {
