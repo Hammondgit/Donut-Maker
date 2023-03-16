@@ -66,12 +66,6 @@ padding-right: 2rem;
   text-decoration: none;
 }
 
-/* cost number */
-.cost{
- 
-
-}
-
 
 /* Container for flexboxes */
 .row {
@@ -194,16 +188,12 @@ padding-right: 2rem;
  /* hover exit */
 .BigDonut{
   scale:0.7;
-
- 
   transition-duration:0.5s;
   transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73); 
    
 }
-  
  /* hover over  */
 .BigDonut:hover{
-
 transition-duration:0.4s;
  scale: 0.9;
 }
@@ -234,4 +224,28 @@ transition-timing-function: cubic-bezier(0.64, 2.57, 0.67, 0.73);
 .MultiButton:hover{
   transition-duration:0.4s;
   scale: 0.9;
+} 
+
+/* Style for shop */
+.ShopWindow{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #b92997;
+  padding: 50px;
+  width: 800px;
+  height: 400px;
+  z-index: 2;
+}
+
+.ShopOverlay{
+  opacity:0.8;
+  background-color: #111111;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index: index 1;
 }

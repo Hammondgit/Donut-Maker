@@ -1,8 +1,6 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 let SpriteArray = [];
 
@@ -55,7 +53,7 @@ class SnowingDonut{
             this.size = Math.floor(Math.random() * 3) + 1;
             this.xDonutImage = this.GenerateXDountRandom();
             this.yDonutImage = this.GenerateYDountRandom();
-        }
+        } 
      }
 
     draw(){
@@ -95,13 +93,13 @@ function SpawnSnowingDonut(){
 
 function animate(){
     requestAnimationFrame(animate);
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.outerWidth;
+    canvas.height = window.outerHeight-208;
     SpriteArray.forEach(function(Sprite){
     Sprite.UpdateSprite();
     Sprite.draw();
     }) 
-
+ 
 }
 
 

@@ -1,7 +1,7 @@
 const ClickButton = document.getElementById("DonutClick");
 const AutoButton = document.getElementById("AutoClick");
 const MultiButton = document.getElementById("MultiClicker");
-//temp
+
 const DonutCount = document.getElementById("DonutText");
 const AutoCount = document.getElementById("AutoText");
 const MultiCount = document.getElementById("MultiText");
@@ -13,10 +13,23 @@ const BonusEvent = document.getElementById("BonusEvent");
 
 const StartGame = document.getElementById("StartGame");
 
-let AudioButton = document.getElementById("audioButton");
+const AudioButton = document.getElementById("audioButton");
 const AudioSource = document.getElementById("audioPlayerSource");
 const AudioPlayer = document.getElementById("audioPlayer");
 const AudioCLick = document.getElementById("click");
+
+const ShopClick = document.getElementById('ShopClick').onclick = function(){
+ 
+   document.getElementById('ShopOverlay').hidden = false;
+   document.getElementById('ShopWindow').hidden = false;
+};
+
+const ShopClose = document.getElementById("ShopClose").onclick = function(){
+
+   document.getElementById('ShopOverlay').hidden = true;
+   document.getElementById('ShopWindow').hidden = true;
+};
+ 
 
 let MyDonut = new Donut();
 let MyAudio = new Music();
@@ -170,11 +183,12 @@ MultiButton.addEventListener('click', function () {
 
 
 
+
 /** To do List
  * Make a mechanics or thing that gets rid of donuts
  * add more stuff to the shop
  * css my website better
- * Rename my variables so thta others can understand it better 
+ * Rename my variables so that others can understand it better 
  * polish the game
  * Balance the game
  * optimize code

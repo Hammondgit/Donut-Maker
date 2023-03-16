@@ -9,7 +9,6 @@
 </head>
 
 <body> 
-  
     <header>
 
         <h1 class="logo">Donut Saga Beta<h1> 
@@ -85,40 +84,43 @@
 
             <label for="MultiClicker">Click multiplier</label>
             <input type="text" name="MultiText" id="MultiText" value="1" readonly />
+
+    
+            
         </div>
 
     </div>
     
     <div class="column">
 
-        <div class ="buttonContainer">
-
+        <div class="dropdown">
+          
             <div class="dropdownhover">
-                <button class="dropbtn" id = "ShopButton" >Shop</button>
-                <div class="dropdown-content-hover">
-        
-                    <button id ="PurchasingFromPastToPresent">From Past To Present Cost:10</button>
-                    <button id ="PurchasingLaNoireMenuTheme">LA Noire Menu Theme Cost:10</button>
-                    <button id ="PurchasingMilkoiPaperAndCats">Milkoi Paper And Cats Cost:10</button>
-                    <button id ="PurchasingProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel Cost:10</button>
-                    <button id ="PurchasingYoureGoingToHaveaBadTime">You're Going To Have a Bad Time Cost:10</button>
-                    <button id ="PurchasingDovahkiin">Dovahkiin Cost:10</button>
-                    <button id ="PurchasingWeirdMachine">Weird Machine:10</button>
-                    <button id ="PurchasingNeverGonnaGiveYouUp">? Cost:10</button>
-                    <button id ="PurchasingCoconutMall-MarioKart">CoconutMall Cost:10</button>
-                    
-        
-                </div>
-              </div>
+                <button class="dropbtn" id = "ShopClick" >Shop</button>
+
+                 <Div class="ShopWindow" id="ShopWindow" hidden > 
+                     <button class="dropbtn" id="ShopClose">Close Shope</button>
+
+                     <button id ="PurchasingFromPastToPresent">From Past To Present Cost:10</button>
+                     <button id ="PurchasingLaNoireMenuTheme">LA Noire Menu Theme Cost:10</button>
+                     <button id ="PurchasingMilkoiPaperAndCats">Milkoi Paper And Cats Cost:10</button>
+                     <button id ="PurchasingProfessorLaytonAndLastTimeTravel">Professor Layton And Last Time Travel Cost:10</button>
+                     <button id ="PurchasingYoureGoingToHaveaBadTime">You're Going To Have a Bad Time Cost:10</button>
+                     <button id ="PurchasingDovahkiin">Dovahkiin Cost:10</button>
+                     <button id ="PurchasingWeirdMachine">Weird Machine:10</button>
+                     <button id ="PurchasingNeverGonnaGiveYouUp">? Cost:10</button>
+                     <button id ="PurchasingCoconutMall-MarioKart">CoconutMall Cost:10</button>
+
+                    </Div>
+                    <div class ="ShopOverlay" id="ShopOverlay" hidden></div>
+          </div>
 
         </div>
-
 
     </div>
 
   </div>
   
-   <hr/>
   <div class="footer">
     <div id="BonusEvent" class="Hide">
         <p>Bonus Donuts !!!</p>
@@ -129,12 +131,12 @@
 
 
 <div class = "Main Donut">
-    <canvas id="canvas" width="100" height="100"></canvas>
+    <canvas id="canvas" width="100" height="100" style="padding-left: 8px;"></canvas>
 </div>
 
 <script src="Script/Music.js"></script>
 <script src="Script/Donut.js"></script>
 <script src="Script/Sprite.js"></script>
-<script src="Script/java.js"></script>
+<script src="Script/functionality.js"></script>
 </body>
 </html>

@@ -21,6 +21,7 @@ var PurchasingNeverGonnaGiveYouUp = document.getElementById("PurchasingNeverGonn
 var PurchasingWeirdMachine = document.getElementById("PurchasingWeirdMachine");
 var PurchasingCoconutMall = document.getElementById("PurchasingCoconutMall-MarioKart");
 
+
 class Music {
 
    constructor(){
@@ -41,7 +42,7 @@ class Music {
       WeirdMachine.disabled = true;
       CoconutMall.disabled = true;
       
-
+    
       PurchasingFromPastToPresent.disabled = true;
       PurchasingLaNoireMenuTheme.disabled = true;
       PurchasingMilkoiPaperAndCats.disabled = true;
@@ -51,6 +52,7 @@ class Music {
       PurchasingNeverGonnaGiveYouUp.disabled = true;
       PurchasingWeirdMachine.disabled = true;
       PurchasingCoconutMall.disabled = true;
+       
    }
 
       MusicPurchasing(){

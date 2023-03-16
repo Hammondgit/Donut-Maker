@@ -2,6 +2,10 @@
 
 Changelogs
 
+version 0.5
+Shop sytle change
+Change the x-aixs range of falling dounts
+
 version 0.4
 style chagnes 
 music change
