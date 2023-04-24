@@ -26,9 +26,9 @@ padding-right: 2rem;
 }
 
 .nav{
-  display:flex;
-  gap: 1rem;
- align-self: center;
+display:flex;
+gap: 1rem;
+align-self: center;
  cursor: default;
 }
 
